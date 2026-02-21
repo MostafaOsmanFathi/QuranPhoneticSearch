@@ -1,9 +1,10 @@
 import csv
+from pathlib import Path
 from typing import List
 
 from rapidfuzz import process, fuzz
 
-CSV_PATH = "./data/quran_words.csv"
+CSV_PATH = Path(__file__).parent / "data" / "quran_words.csv"
 
 class QuranSearch:
     CHOICES:dict = None
