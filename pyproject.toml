@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quran-phonetic-search"
+version = "0.1.0"
+description = "Fuzzy search for Quran words using phonetic or Latin transliteration"
+authors = [{ name = "Mostafa Osman", email = "mostafa.osman.fathi@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "rapidfuzz>=3.0,<4.0",
+    "pandas>=3.0"
+]
+
+urls = { "homepage" = "https://github.com/MostafaOsmanFathi/QuranPhoneticSearch" }
+license = { text = "MIT" }
+keywords = ["CLI", "Quran", "search", "phonetic", "arabic", "transliteration"]
+
+[project.scripts]
+quran-search = "quran_phonetic_search.main:main"  # CLI command
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["quran_phonetic_search*"]
+
+[tool.setuptools.package-data]
+"quran_phonetic_search" = ["data/*.csv"]
