@@ -14,14 +14,10 @@ Quran Phonetic Search is a Python package and CLI tool that allows fuzzy searchi
 
 You can install the package locally from source or via pip once published.
 
-### Local installation
+### installation
 
 ```bash
-# Build the package
-python -m build
-
-# Install locally
-pip install --force-reinstall dist/quran_phonetic_search-0.1.0-py3-none-any.whl
+pip install quran-phonetic-search==0.1.0
 ```
 
 ### Dependencies
